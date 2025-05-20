@@ -8,5 +8,54 @@ This project aims to predict the profit of a startup based on various input feat
 
 ---
 
-## 📁 Project Structure
+## 🔍 Features
+
+- Predict startup profit from user input
+- Trained using supervised ML algorithms
+- Web interface for user-friendly predictions
+- Includes one-hot encoded state variables
+- Scalable and modular code structure
+
+---
+
+## 🛠️ Tech Stack
+
+- **Python**
+- **Pandas, NumPy, Scikit-Learn**
+- **Flask** (for deployment)
+- **HTML/CSS/Bootstrap** (for frontend)
+- **Matplotlib / Seaborn** (for EDA, optional)
+
+---
+
+## 📊 Dataset: `50_Startups.csv`
+
+The dataset consists of the following columns:
+- `R&D Spend`
+- `Administration`
+- `Marketing Spend`
+- `State` (California, Florida, New York)
+- `Profit` (target variable)
+
+> Categorical feature `State` is one-hot encoded into:
+> - `state_florida`
+> - `state_new york`
+> *(implying California is the base case)*
+
+---
+
+## 📂 About `columns.json`
+
+The `columns.json` file stores the list of input features expected by the model after preprocessing:
+```json
+{
+  "data_columns": [
+    "r&d spend",
+    "administration",
+    "marketing spend",
+    "state_florida",
+    "state_new york"
+  ]
+}
+
 
